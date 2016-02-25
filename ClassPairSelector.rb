@@ -2,6 +2,7 @@ def random_pair_selector(class_members)
     
     groups = []
     number_of_class_members = class_members.count
+    x = 1
     
     while class_members.count > 3
     
@@ -17,6 +18,7 @@ def random_pair_selector(class_members)
     puts groups
     puts class_members.join(" & ")
     puts "Total Number of Class Members: #{number_of_class_members}"
+    puts x
       
 end
 
