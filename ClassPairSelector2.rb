@@ -3,10 +3,11 @@ def random_pair_selector(class_members)
     groups = []
     number_of_class_members = class_members.count
     
-    number_of_groups_of_three = 1
+    number_of_groups_of_three = 0
     
+    if class_members.count != 3   
     
-        while class_members.count > 3
+        while class_members.count > 1 && class_members.count != 3
     
             random_member1 = class_members.sample
             class_members.delete(random_member1)
@@ -17,6 +18,15 @@ def random_pair_selector(class_members)
         
         end
     
+    end
+    
+    if class_members.count == 3   
+    
+        number_of_groups_of_three = 1
+    
+    end
+    
+    
     puts groups
     puts class_members.join(" & ")
     puts "Total Number of Class Members: #{number_of_class_members}"
@@ -26,5 +36,5 @@ def random_pair_selector(class_members)
       
 end
 
-random_pair_selector(["Shane", "Ed", "Jen", "Heather", "Dolly", "Aaron", "Rich", "John"])
+random_pair_selector(["Shane", "Ed", "Jen", "Heather", "Dolly", "Aaron", "Rich", "John", "John T", "x", "y"])
 
